@@ -73,24 +73,6 @@ jQuery(function($) {
                     "lightness": 12
                 }]
             }];
-            var map_options = {
-                center: new google.maps.LatLng($latitude, $longitude),
-                zoom: $map_zoom,
-                panControl: false,
-                zoomControl: false,
-                mapTypeControl: false,
-                streetViewControl: false,
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                scrollwheel: false,
-                styles: style,
-            }
-            var map = new google.maps.Map(document.getElementById('googleMap'), map_options);
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng($latitude, $longitude),
-                map: map,
-                visible: true,
-                icon: $marker_url
-            });
         }
     }());
 });

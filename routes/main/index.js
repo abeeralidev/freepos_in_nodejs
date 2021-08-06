@@ -5,29 +5,20 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('main/index', { title: 'Express' });
 });
-router.get('/about', function(req, res, next) {
-  res.render('main/about', { title: 'Express' });
+router.get('/features', function(req, res, next) {
+  res.render('main/features', { title: 'Express' });
 });
-router.get('/contact', function(req, res, next) {
-  res.render('main/contact', { title: 'Express' });
+router.get('/screenshots', function(req, res, next) {
+  res.render('main/screenshots', { title: 'Express' });
 });
-router.get('/download', function(req, res, next) {
-  res.render('main/download', { title: 'Express' });
+router.get('/whomadethis', function(req, res, next) {
+  res.render('main/whomadethis', { title: 'Express' });
 });
-router.get('/forum', function(req, res, next) {
-  res.render('main/forum', { title: 'Express' });
+router.get('/support', function(req, res, next) {
+  res.render('main/support', { title: 'Express' });
 });
-router.get('/services', function(req, res, next) {
-  res.render('main/services', { title: 'Express' });
-});
-router.get('/team', function(req, res, next) {
-  res.render('main/team', { title: 'Express' });
-});
-router.get('/users', function(req, res, next) {
-  res.render('main/users', { title: 'Express' });
-});
-router.get('/', function(req, res, next) {
-  res.render('main/index', { title: 'Express' });
+router.get('/login', function(req, res, next) {
+  res.render('main/login', { title: 'Express' });
 });
 
 
