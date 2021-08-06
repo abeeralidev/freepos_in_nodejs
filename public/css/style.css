@@ -606,7 +606,8 @@ button:focus,
 .hero-slide .carousel-caption p {
     font-size: 20px;
     color: #fff;
-    font-weight: 400
+    font-weight: 400;
+    text-transform:uppercase;
 }
 
 .hero-slide .carousel-control.left,
@@ -1440,4 +1441,16 @@ button:focus,
     margin: 0;
     text-align: center;
     top: 65%
+}
+.rounded{
+border-radius: 2px;
+}
+.rounded-1{
+border-radius: 3px;
+}
+.rounded-2{
+border-radius: 6px;
+}
+.rounded-3{
+border-radius: 9px;
 }

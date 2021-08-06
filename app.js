@@ -7,16 +7,19 @@ var expressLayouts = require('express-ejs-layouts');
 
 
 var indexRouter = require('./routes/main/index');
-var usersRouter = require('./routes/main/users');
-var forumRouter = require('./routes/main/forum');
-var teamRouter = require('./routes/main/team');
-var downloadRouter = require('./routes/main/download');
+// var usersRouter = require('./routes/main/users');
+// var forumRouter = require('./routes/main/forum');
+// var teamRouter = require('./routes/main/team');
+// var downloadRouter = require('./routes/main/download');
+// var contactRouter = require('./routes/main/contact');
+// var servicesRouter = require('./routes/main/services');
+// var aboutRouter = require('./routes/main/about');
 
 var adminindexRouter = require('./routes/admin/index');
-var admindownloadRouter = require('./routes/admin/download');
-var adminforumRouter = require('./routes/admin/forum');
-var adminteamRouter = require('./routes/admin/team');
-var adminusersRouter = require('./routes/admin/users');
+// var admindownloadRouter = require('./routes/admin/download');
+// var adminforumRouter = require('./routes/admin/forum');
+// var adminteamRouter = require('./routes/admin/team');
+// var adminusersRouter = require('./routes/admin/users');
 
 const port = 8013
 
@@ -38,16 +41,19 @@ app.use(expressLayouts);
 
 
 app.use('/', indexRouter);
-app.use('/download', downloadRouter);
-app.use('/forum', forumRouter);
-app.use('/team', teamRouter);
-app.use('/users', usersRouter);
+// app.use('/download', downloadRouter);
+// app.use('/forum', forumRouter);
+// app.use('/team', teamRouter);
+// app.use('/users', usersRouter);
+// app.use('/contact', contactRouter);
+// app.use('/services', servicesRouter);
+// app.use('/about', aboutRouter);
 
 app.use('/admin', adminindexRouter);
-app.use('/admin/download', admindownloadRouter);
-app.use('/admin/forum', adminforumRouter);
-app.use('/admin/team', adminteamRouter);
-app.use('/admin/users', adminusersRouter);
+// app.use('/admin/download', admindownloadRouter);
+// app.use('/admin/forum', adminforumRouter);
+// app.use('/admin/team', adminteamRouter);
+// app.use('/admin/users', adminusersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
