@@ -14,23 +14,6 @@
     "express-ejs-layouts": "^2.5.1",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.12",
-    "yarn": "^1.22.11",
-    "@sendgrid/mail": "^7.4.0",
-    "body-parser": "^1.19.0",
-    "ckeditor": "^4.12.1",
-    "connect-timeout": "^1.9.0",
-    "ejs-locals": "^1.0.2",
-    "express-session": "^1.17.1",
-    "fs-extra": "^9.0.1",
-    "http-errors": "~1.6.3",
-    "images": "^3.2.3",
-    "jsonwebtoken": "^8.5.1",
-    "moment": "^2.29.1",
-    "mongoose": "^5.10.6",
-    "mongoose-materialized": "^0.2.0",
-    "mongoose-unique-validator": "^2.0.3",
-    "multiparty": "^4.2.2",
-    "node-helper": "^0.1.1",
-    "webp-converter": "^2.3.1"
+    "yarn": "^1.22.11"
   }
 }

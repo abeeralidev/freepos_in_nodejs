@@ -1,3 +1,106 @@
+<style>
+    .img-responsive {
+        margin: auto;
+        margin-top: 80px;
+        cursor: pointer;
+    }
+
+    #myImg {
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #myImg:hover {
+        opacity: 0.7;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 150vh;
+    }
+
+    #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+
+    .modal-content,
+    #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+    .close {
+        position: sticky;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+        opacity: 0.8;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 09;
+    }
+    @media only screen and (max-width: 700px) {
+        .modal-content {
+            width: 100%;
+        }
+    }
+    .mt-0{
+        margin-top: 0 !important;
+    }
+</style>
 <section class="single-page-title">
     <div class="container text-center">
         <h2>Screenshots</h2>
@@ -5,40 +108,190 @@
 </section>
 
 <section class="contact-form ptb-100">
-    <div class="container text-center">
-        <h2>Compellingly implement distinctive outsourcing<br>and 24/365 customer service energistically.</h2>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <form>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group user-name">
-                                <label for="nameFive-first" class="sr-only">Name</label>
-                                <input type="text" class="form-control" required="" id="nameFive-first" placeholder="First Name">
-                            </div>
-                            <div class="form-group user-email">
-                                <label for="emailFive" class="sr-only">Email</label>
-                                <input type="email" class="form-control" required="" id="emailFive" placeholder="Email Address">
-                            </div>
-                            <div class="form-group user-phone">
-                                <label for="websiteOne" class="sr-only">Website</label>
-                                <input type="text" class="form-control" required="" id="websiteOne" placeholder="Phone">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group user-message">
-                                <label for="messageOne" class="sr-only">Message</label>
-                                <textarea class="form-control" required="" id="messageOne" placeholder="Write Message"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
+    <section class="section-title">
+        <div class="container text-center">
+            <h2>Screenshots</h2>
+            <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
         </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <figure class="thumbnail">
+                    <a ><img onclick="zoom('img/screenshots/1.png')" src="img/screenshots/1.png" class="img-responsive mt-0" alt="Image"></a>
+                    <figcaption class="caption text-center">
+                        <h3>Login Page -
+                            <small>First Page</small>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-sm-4">
+                <figure class="thumbnail">
+                    <a ><img onclick="zoom('img/screenshots/2.png')" src="img/screenshots/2.png" class="img-responsive mt-0" alt="Image"></a>
+                    <figcaption class="caption text-center">
+                        <h3>Dashboard Page -
+                            <small>Second</small>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-sm-4">
+                <figure class="thumbnail">
+                    <a ><img onclick="zoom('img/screenshots/3.png')" src="img/screenshots/3.png" class="img-responsive mt-0" alt="Image"></a>
+                    <figcaption class="caption text-center">
+                        <h3>POS Terminal
+                            <small>marketing</small>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <figure class="thumbnail">
+                    <a ><img onclick="zoom('img/screenshots/4.png')" src="img/screenshots/4.png" class="img-responsive mt-0" alt="Image"></a>
+                    <figcaption class="caption text-center">
+                        <h3>Add Products
+                            <small>Director</small>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-sm-4">
+                <figure class="thumbnail">
+                    <a ><img onclick="zoom('img/screenshots/5.png')" src="img/screenshots/5.png" class="img-responsive mt-0" alt="Image"></a>
+                    <figcaption class="caption text-center">
+                        <h3>Add Persons
+                            <small>Founder</small>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-sm-4">
+                <figure class="thumbnail">
+                    <a ><img onclick="zoom('img/screenshots/6.png')" src="img/screenshots/6.png" class="img-responsive mt-0" alt="Image"></a>
+                    <figcaption class="caption text-center">
+                        <h3>Jenefir White -
+                            <small>marketing</small>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <figure class="thumbnail">
+                    <a ><img onclick="zoom('img/screenshots/7.png')" src="img/screenshots/7.png" class="img-responsive mt-0" alt="Image"></a>
+                    <figcaption class="caption text-center">
+                        <h3>Product List
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-sm-4">
+                <figure class="thumbnail">
+                    <a ><img onclick="zoom('img/screenshots/8.png')" src="img/screenshots/8.png" class="img-responsive mt-0" alt="Image"></a>
+                    <figcaption class="caption text-center">
+                        <h3>Settings
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-sm-4">
+                <figure class="thumbnail">
+                    <a ><img onclick="zoom('img/screenshots/9.png')" src="img/screenshots/9.png" class="img-responsive mt-0" alt="Image"></a>
+                    <figcaption class="caption text-center">
+                        <h3>Easy Navbar
+                            <small>marketing</small>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-12">
+                <a><img onclick="zoom('img/screenshots/1.png')" src="img/screenshots/1.png" class="img-responsive"
+                        alt="Image"></a>
+            </div>
+            <div class="col-sm-12">
+                <a><img onclick="zoom('img/screenshots/2.png')" src="img/screenshots/2.png" class="img-responsive"
+                        alt="Image"></a>
+            </div>
+            <div class="col-sm-12">
+                <a><img onclick="zoom('img/screenshots/3.png')" src="img/screenshots/3.png" class="img-responsive"
+                        alt="Image"></a>
+            </div>
+            <div class="col-sm-12">
+                <a><img onclick="zoom('img/screenshots/4.png')" src="img/screenshots/4.png" class="img-responsive"
+                        alt="Image"></a>
+            </div>
+            <div class="col-sm-12">
+                <a><img onclick="zoom('img/screenshots/5.png')" src="img/screenshots/5.png" class="img-responsive"
+                        alt="Image"></a>
+            </div>
+            <div class="col-sm-12">
+                <a><img onclick="zoom('img/screenshots/6.png')" src="img/screenshots/6.png" class="img-responsive"
+                        alt="Image"></a>
+            </div>
+            <div class="col-sm-12">
+                <a><img onclick="zoom('img/screenshots/7.png')" src="img/screenshots/7.png" class="img-responsive"
+                        alt="Image"></a>
+            </div>
+            <div class="col-sm-12">
+                <a><img onclick="zoom('img/screenshots/8.png')" src="img/screenshots/8.png" class="img-responsive"
+                        alt="Image"></a>
+            </div>
+            <div class="col-sm-12">
+                <a><img onclick="zoom('img/screenshots/9.png')" src="img/screenshots/9.png" class="img-responsive"
+                        alt="Image"></a>
+            </div>
+
+        </div>
+
     </div>
+
 </section>
 
-<section class="map-section">
-    <div id="googleMap"></div>
-</section>
+
+
+</head>
+
+<body>
+
+
+    <!-- The Modal -->
+    <div id="myModal" onclick="removezoom()" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" onclick="stopPropagation()" id="img01">
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        function zoom(src) {
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        function removezoom() {
+            modal.style.display = "none";
+        }
+        function stopPropagation(){
+            event.stopPropagation();
+        }
+    </script>
+
+</body>
+
+</html>
