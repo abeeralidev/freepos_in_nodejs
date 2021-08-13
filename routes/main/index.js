@@ -18,7 +18,10 @@ router.get('/support', function(req, res, next) {
   res.render('main/support', { title: 'Express' });
 });
 router.get('/login', function(req, res, next) {
-  res.render('main/login', { title: 'Express' });
+  res.render('main/login.ejs', { title: 'Express' });
+});
+router.get('/faq', function(req, res, next) {
+  res.render('main/faq.ejs', { title: 'Express' });
 });
 
 

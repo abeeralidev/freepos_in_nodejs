@@ -17,5 +17,8 @@ router.get('/team', function(req, res, next) {
 router.get('/users', function(req, res, next) {
   res.render('admin/users', { title: 'Express' });
 });
+router.get('/blog', function(req, res, next) {
+  res.render('admin/blog', { title: 'Express' });
+});
 
 module.exports = router;
