@@ -1,101 +1,368 @@
-<section class="single-page-title">
-    <div class="container text-center">
-        <h2>Who Made This</h2>
+<% layout('./layout') -%>
+
+<style>
+    *,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #454545;
+    font-weight: 300;
+    background: #ffffff;
+}
+
+a {
+    color: #333333;
+    font-weight: 400;
+    outline: none;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+p {
+    padding: 0;
+    margin: 0 0 15px 0;
+    color: #454545;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0 0 15px 0;
+    color: #333333;
+    font-weight: 700;
+    
+}
+
+h1 {
+    font-weight: 900;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/**********************************/
+/***** Layout & Section Title *****/
+/**********************************/
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.column {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 576px) {
+    .column {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .column {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .column {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    padding: 45px 0 30px 0;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 5px;
+    left: calc(50% - 25px);
+    background: #353535;
+}
+
+.section-title h1 {
+    color: #353535;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+
+@media(max-width: 767.98px) {
+    .section-title h1 {
+        font-size: 40px;
+        letter-spacing: 3px;
+    }
+}
+
+@media(max-width: 567.98px) {
+    .section-title h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+}
+
+
+    .team-6 {
+    margin-bottom: 30px;
+}
+
+.team-6 .team-img {
+    position: relative;
+    font-size: 0;
+    text-align: center;
+    border-radius: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.team-6 .team-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    border: 15px solid #f3f4fa;
+    transition: all .3s;
+}
+
+.team-6:hover .team-img img {
+    border: 0px solid #f3f4fa;
+}
+
+.team-6 .team-content {
+    text-align: center;
+}
+
+.team-6 .team-content h2 {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.team-6 .team-content h3 {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom:30px;
+}
+
+.team-6 .team-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+}
+
+.team-6 .team-social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    padding: 12px 0 10px 0;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 100%;
+    transition: all .3s;
+}
+
+.team-6 .team-social a.social-tw {
+    background: #00acee;
+}
+
+.team-6 .team-social a.social-fb {
+    background: #3b5998;
+}
+
+.team-6 .team-social a.social-li {
+    background: #0e76a8;
+}
+
+.team-6 .team-social a.social-in {
+    background: #3f729b;
+}
+
+.team-6 .team-social a.social-yt {
+    background: #c4302b;
+}
+
+.team-6 .team-social a:last-child {
+    margin-right: 0;
+}
+
+.team-6 .team-social a:hover {
+    background: #222222;
+}
+
+</style>
+<main id="content" role="main">
+    <!-- Hero Section -->
+    <div class="gradient-y-sm-primary position-relative z-index-2 overflow-hidden">
+        <div class="space-top-2 space-top-lg-4 position-relative">
+            <!-- Title -->
+            <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+                <div class="wrapper">
+                            <div class="container">
+                                <div class="section-title">
+                                    <h1>Our Team</h1>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <div class="team-6">
+                                            <div class="team-img">
+                                                <img src="img/team/atta.png" alt="Team Image">
+                                            </div>
+                                            <div class="team-content">
+                                                <h2>Atta Chaudhury</h2>
+                                                <h3>CEO &amp; Founder</h3>
+                                                <div class="team-social">
+                                                    <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                                    <a class="social-yt" href=""><i class="fab fa-youtube"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="team-6">
+                                            <div class="team-img">
+                                                <img src="img/team/alif.png" alt="Team Image">
+                                            </div>
+                                            <div class="team-content">
+                                                <h2>Ali Faraz</h2>
+                                                <h3>Art Director</h3>
+                                                <div class="team-social">
+                                                    <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                                    <a class="social-yt" href=""><i class="fab fa-youtube"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="team-6">
+                                            <div class="team-img">
+                                                <img src="img/team/jawad.png" alt="Team Image">
+                                            </div>
+                                            <div class="team-content">
+                                                <h2>Jawad Hussain</h2>
+                                                <h3>Developer</h3>
+                                                <div class="team-social">
+                                                    <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                                    <a class="social-yt" href=""><i class="fab fa-youtube"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="team-6">
+                                            <div class="team-img">
+                                                <img src="img/team/umar.png" alt="Team Image">
+                                            </div>
+                                            <div class="team-content">
+                                                <h2>Umar Habbib</h2>
+                                                <h3>Designer</h3>
+                                                <div class="team-social">
+                                                    <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
+                                                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
+                                                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
+                                                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
+                                                    <a class="social-yt" href=""><i class="fab fa-youtube"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                </div>
+
+            </div>
     </div>
-</section>
+</main>
 
-
-<section class="team ptb-100">
-    <section class="section-title">
-        <div class="container text-center">
-            <h2>Our Team</h2>
-            <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-        </div>
-    </section>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <figure class="thumbnail">
-                    <a href="#"><img src="img/employee/atta.png" class="img-responsive" alt="Image"></a>
-                    <figcaption class="caption text-center">
-                        <h3>Atta Rasool
-                            <small>Director & Founder</small>
-                        </h3>
-                        <h3>
-                            Contact No
-                            <a href="tel:+923024759550">+92 302 4759550</a>
-                        </h3>
-                    </figcaption>
-                </figure>
-            </div>
-  
-            <div class="col-sm-4">
-                <figure class="thumbnail">
-                    <a href="#"><img src="img/employee/alif.png" class="img-responsive" alt="Image"></a>
-                    <figcaption class="caption text-center">
-                        <h3>Ali Faraz
-                            <small>Founder</small>
-                        </h3>
-                        <h3>
-                            Contact No
-                            <a href="tel:+923069600653">+92 306 9600653</a>
-                        </h3>
-                    </figcaption>
-                </figure>
-            </div>
-  
-            <div class="col-sm-4">
-                <figure class="thumbnail">
-                    <a href="#"><img src="img/employee/hasnat.png" class="img-responsive" alt="Image"></a>
-                    <figcaption class="caption text-center">
-                        <h3>Muhammad Hasnat
-                            <small>Frontend Develper</small>
-                        </h3>
-                        <h3>
-                            Contact No
-                            <a href="tel:+923151463744">+92 315 1463744</a>
-                        </h3>
-                    </figcaption>
-                </figure>
-            </div>
-  
-        </div>
-  
-        <div class="row">
-            <div class="col-sm-4">
-                <figure class="thumbnail">
-                    <a href="#"><img src="img/employee/jawad.png" class="img-responsive" alt="Image"></a>
-                    <figcaption class="caption text-center">
-                        <h3>Jawad Hussain
-                            <small>Director</small>
-                        </h3>
-                        <h3>
-                            Contact No
-                            <a href="tel:+923407170308">+92 340 7170308</a>
-                        </h3>
-                    </figcaption>
-                </figure>
-            </div>
-  
-            <div class="col-sm-4">
-                <figure class="thumbnail">
-                    <a href="#"><img src="img/employee/umar.png" class="img-responsive" alt="Image"></a>
-                    <figcaption class="caption text-center">
-                        <h3>Muhammad Umar Habbib
-                            <small>Founder</small>
-                        </h3>
-                        <h3>
-                            Contact No
-                            <a href="tel:+923088684021">+92 308 8684021</a>
-                        </h3>
-                    </figcaption>
-                </figure>
-            </div>
-  
-
-  
-        </div>
-  
-    </div>
-  
-  </section>

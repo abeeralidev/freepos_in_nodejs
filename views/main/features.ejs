@@ -1,275 +1,245 @@
-  <style>
-      @import url(https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i);
-  /*** FONTS ***/
-  /*** VARIABLES ***/
-  /* Colors */
-  /*** EXTEND ***/
-  /* box-shadow */
-   ol.gradient-list > li, ol.gradient-list > li::before {
-       box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
-  }
-  /*** STYLE ***/
-   *, *:before, *:after {
-       box-sizing: border-box;
-  }
-   html, body {
-       margin: 0;
-       padding: 0;
-  }
-   body {
-       background-color: #fafafa;
-       color: #1d1f20;
-       font-family: 'Raleway', sans-serif;
-  }
-   main {
-       display: block;
-       margin: 0 auto;
-       max-width: 40rem;
-       padding: 1rem;
-  }
-   ol.gradient-list {
-       counter-reset: gradient-counter;
-       list-style: none;
-       margin: 1.75rem 0;
-       padding-left: 1rem;
-  }
-   ol.gradient-list > li {
-       background: white;
-       border-radius: 0 0.5rem 0.5rem 0.5rem;
-       counter-increment: gradient-counter;
-       margin-top: 1rem;
-       min-height: 3rem;
-       padding: 1rem 1rem 1rem 3rem;
-       position: relative;
-  }
-   ol.gradient-list > li::before, ol.gradient-list > li::after {
-       background: linear-gradient(135deg, #83e4e2 0%, #a2ed56 100%);
-       border-radius: 1rem 1rem 0 1rem;
-       content: '';
-       height: 3rem;
-       left: -1rem;
-       overflow: hidden;
-       position: absolute;
-       top: -1rem;
-       width: 3rem;
-  }
-   ol.gradient-list > li::before {
-       align-items: flex-end;
-       content: counter(gradient-counter);
-       color: #1d1f20;
-       display: flex;
-       font: 900 1.5em/1 'Montserrat';
-       justify-content: flex-end;
-       padding: 0.125em 0.25em;
-       z-index: 1;
-  }
-   ol.gradient-list > li:nth-child(10n+1):before {
-       background: linear-gradient(135deg, rgba(162, 237, 86, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%);
-  }
-   ol.gradient-list > li:nth-child(10n+2):before {
-       background: linear-gradient(135deg, rgba(162, 237, 86, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%);
-  }
-   ol.gradient-list > li:nth-child(10n+3):before {
-       background: linear-gradient(135deg, rgba(162, 237, 86, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%);
-  }
-   ol.gradient-list > li:nth-child(10n+4):before {
-       background: linear-gradient(135deg, rgba(162, 237, 86, 0.8) 0%, rgba(253, 220, 50, 0.8) 100%);
-  }
-   ol.gradient-list > li:nth-child(10n+5):before {
-       background: linear-gradient(135deg, rgba(162, 237, 86, 1) 0%, rgba(253, 220, 50, 1) 100%);
-  }
-   ol.gradient-list > li:nth-child(10n+6):before {
-       background: linear-gradient(135deg, rgba(162, 237, 86, 0.8) 0%, rgba(253, 220, 50, 0.8) 100%);
-  }
-   ol.gradient-list > li:nth-child(10n+7):before {
-       background: linear-gradient(135deg, rgba(162, 237, 86, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%);
-  }
-   ol.gradient-list > li:nth-child(10n+8):before {
-       background: linear-gradient(135deg, rgba(162, 237, 86, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%);
-  }
-   ol.gradient-list > li:nth-child(10n+9):before {
-       background: linear-gradient(135deg, rgba(162, 237, 86, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%);
-  }
-   ol.gradient-list > li:nth-child(10n+10):before {
-       background: linear-gradient(135deg, rgba(162, 237, 86, 0) 0%, rgba(253, 220, 50, 0) 100%);
-  }
-   ol.gradient-list > li + li {
-       margin-top: 2rem;
-  }
-  :root {
-	 --duration: 400ms;
-	 --ease: cubic-bezier(0.19, 1, 0.22, 1);
-	 --bounce: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-}
- * {
-	 box-sizing: border-box;
-}
- h1 {
-	 line-height: 1.15;
-}
- p {
-	 line-height: 1.5;
-}
- code {
-	 display: block;
-	 margin-bottom: 1rem;
-	 padding: 1rem;
-	 width: 100%;
-	 font-family: 'Menlo', monospace;
-	 font-size: 14px;
-	 line-height: 1.4;
-	 color: #484848;
-	 background-color: #f3f3f3;
-	 border-radius: 2px;
-}
- code span {
-	 font-weight: bold;
-}
- main {
-	 display: flex;
-	 flex-direction: column;
-	 justify-content: center;
-	 margin: 0 auto;
-	 padding: 1.5rem;
-	 min-height: 100vh;
-	 max-width: 550px;
-}
- input {
-	 margin: 1rem 0;
-	 padding: 0.5rem;
-	 width: 100%;
-	 font-size: 1rem;
-}
- .copy-click {
-	 position: relative;
-	 padding-bottom: 2px;
-	 text-decoration: none;
-	 cursor: copy;
-	 color: #484848;
-	 border-bottom: 1px dashed #767676;
-	 transition: background-color calc(var(--duration) * 2) var(--ease);
-}
- .copy-click:after {
-	 content: attr(data-tooltip-text);
-	 position: absolute;
-	 bottom: calc(100% + 6px);
-	 left: 50%;
-	 padding: 8px 16px;
-	 white-space: nowrap;
-	 background-color: white;
-	 border-radius: 4px;
-	 box-shadow: 0 0 0 -12px rgba(0, 0, 0, 0);
-	 pointer-events: none;
-	 backface-visibility: hidden;
-	 opacity: 0;
-	 transform: translate(-50%, 12px);
-	 transition: box-shadow calc(var(--duration) / 1.5) var(--bounce), opacity calc(var(--duration) / 1.5) var(--bounce), transform calc(var(--duration) / 1.5) var(--bounce);
-}
- .copy-click.is-hovered:after {
-	 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
-	 opacity: 1;
-	 transform: translate(-50%, 0);
-	 transition-timing-function: var(--ease);
-}
- .copy-click.is-copied {
-	 background-color: yellow;
-}
- .copy-click.is-copied:after {
-	 content: attr(data-tooltip-text-copied);
-}
-  </style>
+<% layout('./layout') -%>
 
 
-<section class="single-page-title">
-    <div class="container text-center">
-        <h2>Features</h2>
+<main id="content" role="main">
+    <!-- Hero Section -->
+    <div class="gradient-y-sm-primary position-relative z-index-2 overflow-hidden">
+        <div class="space-top-2 space-top-lg-4 position-relative">
+            <!-- Title -->
+            <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="overflow-hidden">
+                                <div class="container space-top-2 space-top-lg-3 space-bottom-3">
+                                    <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+                                        <h2>Features built for scale</h2>
+                                        <p>Get insights to dig down into what's powering your growth the most.</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-8 mb-7 mb-lg-0">
+                                            <div class="row">
+                                                <div class="col-sm-6 mb-3 mb-sm-7">
+                                                    <a href="/">
+
+                                                        <div class="pr-lg-6">
+                                                            <figure class="max-w-6rem w-100 mb-4">
+                                                                <img class="img-fluid" src="./assets/svg/icons/icon-2.svg" alt="SVG">
+                                                            </figure>
+                                                            <h3 class="h4">Inventory Management</h3>
+                                                            <p class="text-body">Simple and easy inventory management</p>
+                                                        </div>
+                                                    </a>
+                                                    <!-- End Icon Blocks -->
+                                                </div>
+                        
+                                                <div class="col-sm-6 mb-3 mb-sm-7">
+                                                    <a href="#">
+                                                        <!-- Icon Blocks -->
+                                                        <div class="pr-lg-6">
+                                                        <figure class="max-w-6rem w-100 mb-4">
+                                                            <img class="img-fluid" src="./assets/svg/icons/icon-3.svg" alt="SVG">
+                                                        </figure>
+                                                        <h4>Accountiong</h4>
+                                                        <p class="text-body">Double entry accounting system</p>
+                                                    </div>
+                                                </a>
+                                                    <!-- End Icon Blocks -->
+                                                </div>
+                                                
+                        
+                                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    <a href="/">
+
+                                                        <!-- Icon Blocks -->
+                                                        <div class="pr-lg-6">
+                                                        <figure class="max-w-6rem w-100 mb-4">
+                                                            <img class="img-fluid" src="./assets/svg/icons/icon-15.svg" alt="SVG">
+                                                        </figure>
+                                                        <h4>Multi users support</h4>
+                                                        <p class="text-body">It can support multi users and Computers</p>
+                                                    </div>
+                                                </a>
+                                                    <!-- End Icon Blocks -->
+                                                </div>
+                        
+                                                <div class="col-sm-6 mb-sm-0">
+                                                    <a href="">
+                                                    <!-- Icon Blocks -->
+                                                    <div class="pr-lg-6">
+                                                        <figure class="max-w-6rem w-100 mb-4">
+                                                            <img class="img-fluid" src="./assets/svg/icons/icon-5.svg" alt="SVG">
+                                                        </figure>
+                                                        <h4>Selling</h4>
+                                                        <p class="text-body">Easy and instant selling</p>
+                                                    </div>
+                                                    <!-- End Icon Blocks -->
+                                                </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+                                        <div class="col-sm-8 col-md-6 col-lg-4">
+                                            <!-- Article -->
+                                            <article class="position-relative">
+                                                <a class="card shadow-none bg-img-hero w-100 min-h-450rem transition-3d-hover" href="/download"
+                                                    style="background-image: url(./assets/img/400x500/img26.jpg);">
+                                                    <div class="card-body">
+                                                        <h4>Download FreePos</h4>
+                                                        <p class="text-body">Fully Free and open source Point Of Sale</p>
+                                                    </div>
+                                                    <div class="card-footer border-0 bg-transparent pt-0">
+                                                        <span class="font-weight-bold">Browse tools <i
+                                                                class="fas fa-angle-right fa-sm ml-1"></i></span>
+                                                    </div>
+                                                </a>
+                        
+                                                <!-- SVG Elements -->
+                                                <figure class="max-w-19rem w-100 position-absolute bottom-0 right-0 z-index-n1">
+                                                    <div class="mb-n7 mr-n7">
+                                                        <img class="img-fluid" src="./assets/svg/components/dots-2.svg"
+                                                            alt="Image Description">
+                                                    </div>
+                                                </figure>
+                                                <!-- End SVG Elements -->
+                                            </article>
+                                            <!-- End Article -->
+                                        </div>
+                                    </div>
+                                            <div class="row">
+                                                <div class="12">
+                                                    <div class="row">
+                                                        <div class="col-sm-4 mb-3 mb-sm-7">
+                                                            <a href="/">
+        
+                                                                <div class="pr-lg-6">
+                                                                    <figure class="max-w-6rem w-100 mb-4">
+                                                                        <img class="img-fluid" src="./assets/svg/icons/icon-2.svg" alt="SVG">
+                                                                    </figure>
+                                                                    <h3 class="h4">Customers and Vendors Ledger</h3>
+                                                                    <p class="text-body">FreePos Is One of free software that gives Ledgers</p>
+                                                                </div>
+                                                            </a>
+                                                            <!-- End Icon Blocks -->
+                                                        </div>
+                                                        <div class="col-sm-4 mb-3 mb-sm-7">
+                                                            <a href="/">
+        
+                                                                <div class="pr-lg-6">
+                                                                    <figure class="max-w-6rem w-100 mb-4">
+                                                                        <img class="img-fluid" src="./assets/svg/icons/icon-6.svg" alt="SVG">
+                                                                    </figure>
+                                                                    <h3 class="h4">Invoice printing</h3>
+                                                                    <p class="text-body">You Can Print Invoice Easily</p>
+                                                                </div>
+                                                            </a>
+                                                            <!-- End Icon Blocks -->
+                                                        </div>
+                                                        <div class="col-sm-4 mb-3 mb-sm-7">
+                                                            <a href="/">
+        
+                                                                <div class="pr-lg-6">
+                                                                    <figure class="max-w-6rem w-100 mb-4">
+                                                                        <img class="img-fluid" src="./assets/svg/icons/icon-7.svg" alt="SVG">
+                                                                    </figure>
+                                                                    <h3 class="h4">Reporting</h3>
+                                                                    <p class="text-body">You can take report of your whole day</p>
+                                                                </div>
+                                                            </a>
+                                                            <!-- End Icon Blocks -->
+                                                        </div>
+                                                        <div class="col-sm-4 mb-3 mb-sm-7">
+                                                            <a href="/">
+        
+                                                                <div class="pr-lg-6">
+                                                                    <figure class="max-w-6rem w-100 mb-4">
+                                                                        <img class="img-fluid" src="./assets/svg/icons/icon-8.svg" alt="SVG">
+                                                                    </figure>
+                                                                    <h3 class="h4">Send Branded SMS from software</h3>
+                                                                    <p class="text-body">You can send SMS to customers and vendors through software</p>
+                                                                </div>
+                                                            </a>
+                                                            <!-- End Icon Blocks -->
+                                                        </div>
+                                                        <div class="col-sm-4 mb-3 mb-sm-7">
+                                                            <a href="/">
+        
+                                                                <div class="pr-lg-6">
+                                                                    <figure class="max-w-6rem w-100 mb-4">
+                                                                        <img class="img-fluid" src="./assets/svg/icons/icon-2.svg" alt="SVG">
+                                                                    </figure>
+                                                                    <h3 class="h4">No Data limits</h3>
+                                                                    <p class="text-body">FreePos has no data limit you can use it lifetime for free</p>
+                                                                </div>
+                                                            </a>
+                                                            <!-- End Icon Blocks -->
+                                                        </div>
+                                                        <div class="col-sm-4 mb-3 mb-sm-7">
+                                                            <a href="/">
+        
+                                                                <div class="pr-lg-6">
+                                                                    <figure class="max-w-6rem w-100 mb-4">
+                                                                        <img class="img-fluid" src="./assets/svg/icons/icon-9.svg" alt="SVG">
+                                                                    </figure>
+                                                                    <h3 class="h4">Easy to learn and use</h3>
+                                                                    <p class="text-body">This Softwere is very easy to learn and use</p>
+                                                                </div>
+                                                            </a>
+                                                            <!-- End Icon Blocks -->
+                                                        </div>
+                                                        <div class="col-sm-4 mb-3 mb-sm-7">
+                                                            <a href="/">
+        
+                                                                <div class="pr-lg-6">
+                                                                    <figure class="max-w-6rem w-100 mb-4">
+                                                                        <img class="img-fluid" src="./assets/svg/icons/icon-10.svg" alt="SVG">
+                                                                    </figure>
+                                                                    <h3 class="h4">C# WPF and MySql based latest stack</h3>
+                                                                    <p class="text-body">FreePos is based on C# using WPF framework and mysql database</p>
+                                                                </div>
+                                                            </a>
+                                                            <!-- End Icon Blocks -->
+                                                        </div>
+                                                        <div class="col-sm-4 mb-3 mb-sm-7">
+                                                            <a href="/">
+        
+                                                                <div class="pr-lg-6">
+                                                                    <figure class="max-w-6rem w-100 mb-4">
+                                                                        <img class="img-fluid" src="./assets/svg/icons/icon-11.svg" alt="SVG">
+                                                                    </figure>
+                                                                    <h3 class="h4">100% free and open source</h3>
+                                                                    <p class="text-body">This is Fully Open Source and source code is availabe on Github</p>
+                                                                </div>
+                                                            </a>
+                                                            <!-- End Icon Blocks -->
+                                                        </div>
+                                                        <div class="col-sm-4 mb-3 mb-sm-7">
+                                                            <a href="/">
+        
+                                                                <div class="pr-lg-6">
+                                                                    <figure class="max-w-6rem w-100 mb-4">
+                                                                        <img class="img-fluid" src="./assets/svg/icons/icon-12.svg" alt="SVG">
+                                                                    </figure>
+                                                                    <h3 class="h4">And much more</h3>
+                                                                    <p class="text-body">There are many other features in this software</p>
+                                                                </div>
+                                                            </a>
+                                                            <!-- End Icon Blocks -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                </div>
+                            </div>
+
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
     </div>
-</section>
+</main>
 
-
-
-
-
-
-<main>
-    <ol class="gradient-list">
-        <li>Default Username (<a href="" class="copy-click" data-tooltip-text="Click to copy" data-tooltip-text-copied="✔ Copied to clipboard">Admin</a>)</li>
-        <li>Default Password (<a href="" class="copy-click" data-tooltip-text="Click to copy" data-tooltip-text-copied="✔ Copied to clipboard">admin@123</a>)</li>
-        <li>All standard features for Point of sales</li>
-        <li>Inventory</li>
-        <li>Accounting</li>
-        <li>Customers and Vendors Ledger</li>
-        <li>Multiple users</li>
-        <li>Invoice printing</li>
-        <li>Reporting</li>
-        <li>Send Branded SMS from software</li>
-        <li>No Data limits</li>
-        <li>Easy to learn and use</li>
-        <li>C# WPF and MySql based latest stack</li>
-        <li>100% free and open source</li>
-        <li>And much more</li>
-    </ol>
-  </main>
-
-
-
-
-
-
-
-
-<ul>
-
-</ul>
-
-
-
-
-
-
-
-
-
-
-
-<script>
-    const links = document.querySelectorAll('.copy-click');
-const cls = {
-  copied: 'is-copied',
-  hover: 'is-hovered'
-}
-
-const copyToClipboard = str => {
-  const el = document.createElement('input');
-  str.dataset.copyString ? el.value = str.dataset.copyString : el.value = str.text;
-  el.setAttribute('readonly', '');
-  el.style.position = 'absolute';
-  el.style.opacity = 0;
-  document.body.appendChild(el);
-  el.select();
-  document.execCommand('copy');
-  document.body.removeChild(el);
-}
-
-const clickInteraction = (e) => {
-  e.preventDefault();
-  copyToClipboard(e.target);
-  e.target.classList.add(cls.copied);
-  setTimeout(() => e.target.classList.remove(cls.copied), 1000);
-  setTimeout(() => e.target.classList.remove(cls.hover), 700);  
-}
-
-Array.from(links).forEach(link => {
-  link.addEventListener('click', e => clickInteraction(e));
-  link.addEventListener('keypress', e => {
-    if (e.keyCode === 13) clickInteraction(e);
-  });
-  link.addEventListener('mouseover', e => e.target.classList.add(cls.hover));
-  link.addEventListener('mouseleave', e => {
-    if (!e.target.classList.contains(cls.copied)) {
-     e.target.classList.remove(cls.hover); 
-    }
-  });
-});
-
-</script>

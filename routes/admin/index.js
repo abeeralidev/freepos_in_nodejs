@@ -20,5 +20,8 @@ router.get('/users', function(req, res, next) {
 router.get('/blog', function(req, res, next) {
   res.render('admin/blog', { title: 'Express' });
 });
+router.get('/download', function(req, res, next) {
+  res.render('admin/download', { title: 'Express' });
+});
 
 module.exports = router;

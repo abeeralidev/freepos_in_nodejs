@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "local": "nodemon app.js"
+    "local": "nodemon app.js",
+    "l": "nodemon app.js",
+    ";": "nodemon app.js",
+    "p": "nodemon app.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

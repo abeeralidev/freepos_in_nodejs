@@ -1,345 +1,448 @@
 <% layout('./layout') -%>
-<div id="x-corp-carousel" class="carousel slide hero-slide hidden-xs" data-ride="carousel">
+<style>
+@font-face {
+	 font-family: "ubuntu";
+	 font-style: italic;
+	 font-weight: 300;
+	 src: local("Lato Light Italic"), local("Lato-LightItalic"), url(https://fonts.gstatic.com/s/ubuntucondensed/v8/u-4k0rCzjgs5J7oXnJcM_0kACGMtT-Dfqw.woff2) format("woff2");
+}
 
-  <ol class="carousel-indicators">
-      <li data-target="#x-corp-carousel" data-slide-to="0" class="active"></li>
-      <li data-target="#x-corp-carousel" data-slide-to="1"></li>
-      <li data-target="#x-corp-carousel" data-slide-to="2"></li>
-  </ol>
-
-  <div class="carousel-inner" role="listbox">
-      <div class="item active">
-          <img src="img/hero-slide-1.jpg" alt="Hero Slide">
-          <div class="carousel-caption">
-              <h1>Full Free Point of sales</h1>
-              <p>This is a full free Open Source Point Of Sales, You can donwload in install easily <br> free of cost, Its free for lifetime</p>
-                  <button class="btn btn-success rounded-3" onclick="navigatetolinkblank('github.com/ravicosoftltd/businessbook-desktop/releases/latest/download/BusinessBook.Setup.zip')">Download</button>
-          </div>
-      </div>
-      <div class="item">
-          <img src="img/hero-slide-2.jpg" alt="...">
-          <div class="carousel-caption">
-              <h1>Full source code is Available on github</h1>
-              <p>If you want to change anything in this software you can get source code <br> whitch is avalibe on github </p>
-                  <button class="btn btn-success rounded-2" onclick="navigatetolinkblank('github.com/ravicosoftltd/businessbook-desktop')">View Source code</button>
-          </div>
-      </div>
-      <div class="item">
-          <img src="img/hero-slide-3.jpg" alt="...">
-          <div class="carousel-caption">
-              <h1>Best Choice For your Business</h1>
-              <p>Free-Pos is the best choice for your business because its full free and very lighweight <br> can run on any pc or laptop</p>
-          </div>
-      </div>
-  </div>
-
-  <a class="left carousel-control" href="#x-corp-carousel" role="button" data-slide="prev">
-      <i class="fa fa-angle-left" aria-hidden="true"></i>
-      <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#x-corp-carousel" role="button" data-slide="next">
-      <i class="fa fa-angle-right" aria-hidden="true"></i>
-      <span class="sr-only">Next</span>
-  </a>
-</div>
-
-<section class="x-services ptb-100 gray-bg">
-  <section class="section-title">
-      <div class="container text-center">
-          <h2>What We Offer</h2>
-          <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-      </div>
-  </section>
-  <div class="container">
-      <div class="row">
-          <div class="col-md-6">
-              <div class="thumbnail clearfix">
-                  <a href="#"><img class="img-responsive" src="img/img-offer-1.jpg" alt="Image"></a>
-                  <div class="caption">
-                      <h3><a href="#">Investment</a></h3>
-                      <p>Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam
-                          blandit diam feugiat tellus odio malesuada ex.</p>
+ a {
+	 text-decoration: none;
+	 color: #9ca0b1;
+}
+ .wrapper {
+	 text-align: center;
+}
+ .wrapper h1 {
+	 color: #fff;
+	 font-size: 92px;
+	 font-family: "ubuntu";
+	 text-transform: uppercase;
+	 font-weight: 700;
+	 font-family: "Josefin Sans", sans-serif;
+	 background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
+	 background-size: auto auto;
+	 background-clip: border-box;
+	 background-size: 200% auto;
+	 color: #fff;
+	 background-clip: text;
+	 text-fill-color: transparent;
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 animation: textclip 1.5s linear infinite;
+	 display: inline-block;
+}
+ .wrapper p {
+	 color: #fff;
+	 font-family: "ubuntu";
+	 text-transform: uppercase;
+	 font-family: "Josefin Sans", sans-serif;
+	 background: linear-gradient(to right, #095fab 10%, #25abe8 50%, #57d75b 60%);
+	 background-size: auto auto;
+	 background-clip: border-box;
+	 background-size: 200% auto;
+	 color: #fff;
+	 background-clip: text;
+	 text-fill-color: transparent;
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 animation: textclip 1.5s linear infinite;
+	 display: inline-block;
+}
+ @keyframes textclip {
+	 to {
+		 background-position: 200% center;
+	}
+}
+</style>
+<main id="content" role="main">
+    <!-- Hero Section -->
+    <div class="gradient-y-sm-primary position-relative z-index-2 overflow-hidden">
+        <div class="container space-top-2 space-top-lg-4 position-relative">
+            <!-- Title -->
+            <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+                <div class="wrapper">
+                    <h1 class="display-4 mb-3 mainheading">FreePOS</h1>
+                    <p class="lead">FreePOS is the free point of sales, inventory management, and accounting software. FreePOS decreases the gaps between customers to sellers. `Lets go over the horizon`</p>
+                </div>
+                <button class="btn btn-primary" onclick="navigatetopage('download')" >Download</button>
+            </div>
+            <figure class="position-absolute z-index-n1"
+                style="top: -35rem; left: 50rem; width: 62rem; height: 62rem;">
+                <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                    viewBox="0 0 260 260">
+                    <circle fill="#e7eaf3" opacity=".7" cx="130" cy="130" r="130" />
+                </svg>
+            </figure>
+            <figure class="position-absolute z-index-n1"
+                style="top: 15rem; left: 70rem; width: 20rem; height: 20rem;">
+                <img class="img-fluid" src="./assets/svg/components/circled-stripe.svg" alt="Image Description">
+            </figure>
+            <figure class="position-absolute z-index-n1 bg-dark"
+                style="bottom: 7rem; left: -17rem; width: 15rem; height: 26rem;    bottom: 7rem;
+                left: -17rem;
+                width: 50rem;
+                height: 18rem;
+                position: relative;
+                /* position: relative !important; */
+                top: 4rem;
+                /* width: 42rem; */
+                left: -6rem;">
+                  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="../img/screenshots/1.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/screenshots/2.png" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="../img/screenshots/3.png" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
                   </div>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="thumbnail clearfix">
-                  <a href="#"><img class="img-responsive" src="img/img-offer-2.jpg" alt="Image"></a>
-                  <div class="caption">
-                      <h3><a href="#">Planning</a></h3>
-                      <p>Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam
-                          blandit diam feugiat tellus odio malesuada ex.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="row">
-          <div class="col-md-6">
-              <div class="thumbnail clearfix">
-                  <a href="#"><img class="img-responsive" src="img/img-offer-3.jpg" alt="Image"></a>
-                  <div class="caption">
-                      <h3><a href="#">Analysis</a></h3>
-                      <p>Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam
-                          blandit diam feugiat tellus odio malesuada ex.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-6">
-              <div class="thumbnail clearfix">
-                  <a href="#"><img class="img-responsive" src="img/img-offer-4.jpg" alt="Image"></a>
-                  <div class="caption">
-                      <h3><a href="#">Banking</a></h3>
-                      <p>Praesent dapibus eleifend aug eget sollicitudin velit malesuada Aliquam
-                          blandit diam feugiat tellus odio malesuada ex.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-  </div>
-
-</section>
-
-<section class="x-features">
-  <section class="section-title">
-      <div class="container text-center">
-          <h2>Our Capabilities</h2>
-          <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-      </div>
-  </section>
-  <div class="container">
-      <div class="row">
-          <div class="col-md-6 img-left">
-              <img class="img-responsive" src="img/img-about.png" alt="">
-          </div>
-          <div class="col-md-6">
-              <div class="promo-block-wrapper clearfix">
-                  <div class="promo-icon">
-                      <i class="fa fa-line-chart"></i>
-                  </div>
-                  <div class="promo-content">
-                      <h3>We teach you how to improve your business</h3>
-                      <p>Lorem ipsum dolor sit consectetuer adipiscing elit nonummy ib uismod
-                          tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                  </div>
-              </div>
-
-              <div class="promo-block-wrapper clearfix">
-                  <div class="promo-icon">
-                      <i class="fa fa-life-ring"></i>
-                  </div>
-                  <div class="promo-content">
-                      <h3>We make the technology affordable for you</h3>
-                      <p>Lorem ipsum dolor sit consectetuer adipiscing elit nonummy ib uismod
-                          tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                  </div>
-              </div>
-
-              <div class="promo-block-wrapper clearfix">
-                  <div class="promo-icon">
-                      <i class="fa fa-calculator"></i>
-                  </div>
-                  <div class="promo-content last-type">
-                      <h3>Seamlessly grow wireless human capital before turnkey.</h3>
-                      <p>Lorem ipsum dolor sit consectetuer adipiscing elit nonummy ib uismod
-                          tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                  </div>
-              </div>
-
-          </div>
-      </div>
-  </div>
-</section>
-
-<section class="team ptb-100">
-  <section class="section-title">
-      <div class="container text-center">
-          <h2>Our Team</h2>
-          <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-      </div>
-  </section>
-  <div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <figure class="thumbnail">
-                <a href="#"><img src="img/employee/atta.png" class="img-responsive" alt="Image"></a>
-                <figcaption class="caption text-center">
-                    <h3>Atta Rasool
-                        <small>Director & Founder</small>
-                    </h3>
-                    <h3>
-                        Contact No
-                        <a href="tel:+923024759550">+92 302 4759550</a>
-                    </h3>
-                </figcaption>
             </figure>
         </div>
-
-        <div class="col-sm-4">
-            <figure class="thumbnail">
-                <a href="#"><img src="img/employee/alif.png" class="img-responsive" alt="Image"></a>
-                <figcaption class="caption text-center">
-                    <h3>Ali Faraz
-                        <small>Founder</small>
-                    </h3>
-                    <h3>
-                        Contact No
-                        <a href="tel:+923069600653">+92 306 9600653</a>
-                    </h3>
-                </figcaption>
-            </figure>
-        </div>
-
-        <div class="col-sm-4">
-            <figure class="thumbnail">
-                <a href="#"><img src="img/employee/hasnat.png" class="img-responsive" alt="Image"></a>
-                <figcaption class="caption text-center">
-                    <h3>Muhammad Hasnat
-                        <small>Frontend Develper</small>
-                    </h3>
-                    <h3>
-                        Contact No
-                        <a href="tel:+923151463744">+92 315 1463744</a>
-                    </h3>
-                </figcaption>
-            </figure>
-        </div>
-
     </div>
+    <div class="overflow-hidden">
+        <div class="container space-top-2 space-top-lg-3 space-bottom-3">
+            <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+                <h2>Features built for scale</h2>
+                <p>Get insights to dig down into what's powering your growth the most.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mb-7 mb-lg-0">
+                    <div class="row">
+                        <div class="col-sm-6 mb-3 mb-sm-7">
+                            <div class="pr-lg-6">
+                                <figure class="max-w-6rem w-100 mb-4">
+                                    <img class="img-fluid" src="./assets/svg/icons/icon-2.svg" alt="SVG">
+                                </figure>
+                                <h3 class="h4">Inventory Management</h3>
+                                <p class="text-body">Simple and easy inventory management</p>
+                            </div>
+                            <!-- End Icon Blocks -->
+                        </div>
 
-    <div class="row">
-        <div class="col-sm-4">
-            <figure class="thumbnail">
-                <a href="#"><img src="img/employee/jawad.png" class="img-responsive" alt="Image"></a>
-                <figcaption class="caption text-center">
-                    <h3>Jawad Hussain
-                        <small>Director</small>
-                    </h3>
-                    <h3>
-                        Contact No
-                        <a href="tel:+923407170308">+92 340 7170308</a>
-                    </h3>
-                </figcaption>
-            </figure>
+                        <div class="col-sm-6 mb-3 mb-sm-7">
+                            <!-- Icon Blocks -->
+                            <div class="pr-lg-6">
+                                <figure class="max-w-6rem w-100 mb-4">
+                                    <img class="img-fluid" src="./assets/svg/icons/icon-1.svg" alt="SVG">
+                                </figure>
+                                <h4>Accountiong</h4>
+                                <p class="text-body">Double entry accounting system</p>
+                            </div>
+                            <!-- End Icon Blocks -->
+                        </div>
+
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <!-- Icon Blocks -->
+                            <div class="pr-lg-6">
+                                <figure class="max-w-6rem w-100 mb-4">
+                                    <img class="img-fluid" src="./assets/svg/icons/icon-15.svg" alt="SVG">
+                                </figure>
+                                <h4>Multi users support</h4>
+                                <p class="text-body">It can support multi users and Computers</p>
+                            </div>
+                            <!-- End Icon Blocks -->
+                        </div>
+
+                        <div class="col-sm-6 mb-sm-0">
+                            <!-- Icon Blocks -->
+                            <div class="pr-lg-6">
+                                <figure class="max-w-6rem w-100 mb-4">
+                                    <img class="img-fluid" src="./assets/svg/icons/icon-26.svg" alt="SVG">
+                                </figure>
+                                <h4>Selling</h4>
+                                <p class="text-body">Easy and instant selling</p>
+                            </div>
+                            <!-- End Icon Blocks -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-8 col-md-6 col-lg-4">
+                    <!-- Article -->
+                    <article class="position-relative">
+                        <a class="card shadow-none bg-img-hero w-100 min-h-450rem transition-3d-hover" href="/download"
+                            style="background-image: url(./assets/img/400x500/img26.jpg);">
+                            <div class="card-body">
+                                <h4>Download FreePos</h4>
+                                <p class="text-body">Fully Free and open source Point Of Sale</p>
+                            </div>
+                            <div class="card-footer border-0 bg-transparent pt-0">
+                                <span class="font-weight-bold">Browse tools <i
+                                        class="fas fa-angle-right fa-sm ml-1"></i></span>
+                            </div>
+                        </a>
+
+                        <!-- SVG Elements -->
+                        <figure class="max-w-19rem w-100 position-absolute bottom-0 right-0 z-index-n1">
+                            <div class="mb-n7 mr-n7">
+                                <img class="img-fluid" src="./assets/svg/components/dots-2.svg"
+                                    alt="Image Description">
+                            </div>
+                        </figure>
+                        <!-- End SVG Elements -->
+                    </article>
+                    <!-- End Article -->
+                </div>
+            </div>
         </div>
+    </div>
+    <!-- End Features Section -->
 
-        <div class="col-sm-4">
-            <figure class="thumbnail">
-                <a href="#"><img src="img/employee/umar.png" class="img-responsive" alt="Image"></a>
-                <figcaption class="caption text-center">
-                    <h3>Muhammad Umar Habbib
-                        <small>Founder</small>
-                    </h3>
-                    <h3>
-                        Contact No
-                        <a href="tel:+923088684021">+92 308 8684021</a>
-                    </h3>
-                </figcaption>
-            </figure>
+    <!-- CTA Section -->
+    <div class="container">
+        <div class="w-lg-85 mx-lg-auto">
+            <div class="card overflow-hidden p-4">
+                <div class="row justify-content-md-start align-items-md-center text-center text-md-left">
+                    <div class="col-md-5 offset-md-3 mb-3 mb-md-0">
+                        <h3 class="h4 mb-0">Revolutionizing the way your team works!</h3>
+                    </div>
+                    <div class="col-md-4 text-md-right">
+                        <a class="btn btn-primary transition-3d-hover" href="#">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- SVG Component -->
+                <figure class="w-25 d-none d-md-block position-absolute top-0 left-0 mt-n2">
+                    <img class="img-fluid" src="./assets/svg/illustrations/apps.svg" alt="Image Description">
+                </figure>
+                <!-- End SVG Component -->
+            </div>
         </div>
-      </div>
+    </div>
+    <!-- End CTA Section -->
 
-  </div>
+    <!-- Features Section -->
+    <div class="container space-2 space-lg-3">
+        <!-- Title -->
+        <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+            <h2>FreePos is easy and fast software</h2>
+        </div>
+        <!-- End Title -->
 
-</section>
+        <!-- Nav -->
+        <div class="text-center">
+            <ul class="nav nav-segment nav-pills scrollbar-horizontal mb-7" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-one-code-features-tab" data-toggle="pill"
+                        href="#pills-one-code-features" role="tab" aria-controls="pills-one-code-features"
+                        aria-selected="true">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-two-code-features-tab" data-toggle="pill"
+                        href="#pills-two-code-features" role="tab" aria-controls="pills-two-code-features"
+                        aria-selected="false">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-seven-code-features-tab" data-toggle="pill"
+                        href="#pills-seven-code-features" role="tab" aria-controls="pills-seven-code-features"
+                        aria-selected="false">Add Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-three-code-features-tab" data-toggle="pill"
+                        href="#pills-three-code-features" role="tab" aria-controls="pills-three-code-features"
+                        aria-selected="false">POS Terminal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-four-code-features-tab" data-toggle="pill"
+                        href="#pills-four-code-features" role="tab" aria-controls="pills-four-code-features"
+                        aria-selected="false">Legered Sale Terminal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-five-code-features-tab" data-toggle="pill"
+                        href="#pills-five-code-features" role="tab" aria-controls="pills-five-code-features"
+                        aria-selected="false">Total Sales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-six-code-features-tab" data-toggle="pill"
+                        href="#pills-six-code-features" role="tab" aria-controls="pills-six-code-features"
+                        aria-selected="false">Settings</a>
+                </li>
+            </ul>
+        </div>
+        <!-- End Nav -->
 
-<section class="testimonial">
-  <section class="section-title">
-      <div class="container text-center">
-          <h2>Satisfied Customer</h2>
-          <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-      </div>
-  </section>
-  <div class="container">
-      <div id="testimonialSlider" class="carousel slide" data-ride="carousel">
+        <!-- Tab Content -->
+        <div class="tab-content pr-lg-4">
+            <div class="tab-pane fade show active" id="pills-one-code-features" role="tabpanel"
+                aria-labelledby="pills-one-code-features-tab">
+                <!-- Device Mockup -->
+                <div class="device-wrapper">
+                    <div class="device">
+                        <img class="img-fluid" src="./assets/svg/components/macbook.svg" alt="Image Description">
+                        <img class="device-macbook-screen" src="./img/screenshots/19.png"
+                            alt="Image Description">
+                    </div>
+                    <!-- <div class="device device-iphone-x">
+                        <img class="device-iphone-x-frame" src="./assets/svg/components/iphone-x.svg"
+                            alt="Image Description">
+                        <img class="device-iphone-x-screen" src="./img/screenshots/2.png"
+                            alt="Image Description">
+                    </div> -->
+                </div>
+                <!-- End Device Mockup -->
+            </div>
 
-          <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                  <blockquote>
-                      <ul>
-                          <li><img src="img/img-testimonial-1.jpg" class="img-responsive" alt="" />
-                          </li>
-                          <li class="name">Justus Kühn</li>
-                      </ul>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egetvel
-                          </br>lacus pretium rhoncus a quis nisly Ut vehicula gravida dui in pulvinar
-                          donec</br> diam elit consequat eget augue vitae aliquet sollicitudin.
-                      </p>
-                  </blockquote>
-              </div>
-              <div class="item">
-                  <blockquote>
-                      <ul>
-                          <li><img src="img/img-testimonial-2.jpg" class=" img-responsive" alt="" />
-                          </li>
-                          <li class="name">Lennox Arnold</li>
-                      </ul>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egetvel
-                          </br>lacus pretium rhoncus a quis nisly Ut vehicula gravida dui in pulvinar
-                          donec</br> diam elit consequat eget augue vitae aliquet sollicitudin.
-                      </p>
-                  </blockquote>
-              </div>
-              <div class="item">
-                  <blockquote>
-                      <ul>
-                          <li><img src="img/img-testimonial-3.jpg" class="img-responsive" alt="" />
-                          </li>
-                          <li class="name">Paulina Berger</li>
-                      </ul>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egetvel
-                          </br>lacus pretium rhoncus a quis nisly Ut vehicula gravida dui in pulvinar
-                          donec</br> diam elit consequat eget augue vitae aliquet sollicitudin.
-                      </p>
-                  </blockquote>
-              </div>
-          </div>
+            <div class="tab-pane fade" id="pills-two-code-features" role="tabpanel"
+                aria-labelledby="pills-two-code-features-tab">
+                <!-- Device Mockup -->
+                <div class="device-wrapper">
+                    <div class="device">
+                        <img class="img-fluid" src="./assets/svg/components/macbook.svg" alt="Image Description">
+                        <img class="device-macbook-screen" src="./img/screenshots/18.png"
+                            alt="Image Description">
+                    </div>
+                    <!-- <div class="device device-iphone-x">
+                        <img class="device-iphone-x-frame" src="./assets/svg/components/iphone-x.svg"
+                            alt="Image Description">
+                        <img class="device-iphone-x-screen" src="./img/screenshots/1.png"
+                            alt="Image Description">
+                    </div> -->
+                </div>
+                <!-- End Device Mockup -->
+            </div>
 
-          <a class="left carousel-control" href="#testimonialSlider" role="button" data-slide="prev">
-              <span><i class="fa fa-angle-left"></i></span>
-              <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#testimonialSlider" role="button" data-slide="next">
-              <span><i class="fa fa-angle-right"></i></span>
-              <span class="sr-only">Next</span>
-          </a>
-      </div>
+            <div class="tab-pane fade" id="pills-three-code-features" role="tabpanel"
+                aria-labelledby="pills-three-code-features-tab">
+                <!-- Device Mockup -->
+                <div class="device-wrapper">
+                    <div class="device">
+                        <img class="img-fluid" src="./assets/svg/components/macbook.svg" alt="Image Description">
+                        <img class="device-macbook-screen" src="./img/screenshots/17.png"
+                            alt="Image Description">
+                    </div>
+                    <!-- <div class="device device-iphone-x">
+                        <img class="device-iphone-x-frame" src="./assets/svg/components/iphone-x.svg"
+                            alt="Image Description">
+                        <img class="device-iphone-x-screen" src="./assets/img/407x867/img3.jpg"
+                            alt="Image Description">
+                    </div> -->
+                </div>
+                <!-- End Device Mockup -->
+            </div>
+            <div class="tab-pane fade" id="pills-seven-code-features" role="tabpanel"
+                aria-labelledby="pills-seven-code-features-tab">
+                <!-- Device Mockup -->
+                <div class="device-wrapper">
+                    <div class="device">
+                        <img class="img-fluid" src="./assets/svg/components/macbook.svg" alt="Image Description">
+                        <img class="device-macbook-screen" src="./img/screenshots/14.png"
+                            alt="Image Description">
+                    </div>
+                    <!-- <div class="device device-iphone-x">
+                        <img class="device-iphone-x-frame" src="./assets/svg/components/iphone-x.svg"
+                            alt="Image Description">
+                        <img class="device-iphone-x-screen" src="./assets/img/407x867/img3.jpg"
+                            alt="Image Description">
+                    </div> -->
+                </div>
+                <!-- End Device Mockup -->
+            </div>
+            <div class="tab-pane fade" id="pills-four-code-features" role="tabpanel"
+                aria-labelledby="pills-four-code-features-tab">
+                <!-- Device Mockup -->
+                <div class="device-wrapper">
+                    <div class="device">
+                        <img class="img-fluid" src="./assets/svg/components/macbook.svg" alt="Image Description">
+                        <img class="device-macbook-screen" src="./img/screenshots/16.png"
+                            alt="Image Description">
+                    </div>
+                    <!-- <div class="device device-iphone-x">
+                        <img class="device-iphone-x-frame" src="./assets/svg/components/iphone-x.svg"
+                            alt="Image Description">
+                        <img class="device-iphone-x-screen" src="./assets/img/407x867/img3.jpg"
+                            alt="Image Description">
+                    </div> -->
+                </div>
+                <!-- End Device Mockup -->
+            </div>
+            <div class="tab-pane fade" id="pills-five-code-features" role="tabpanel"
+                aria-labelledby="pills-five-code-features-tab">
+                <!-- Device Mockup -->
+                <div class="device-wrapper">
+                    <div class="device">
+                        <img class="img-fluid" src="./assets/svg/components/macbook.svg" alt="Image Description">
+                        <img class="device-macbook-screen" src="./img/screenshots/15.png"
+                            alt="Image Description">
+                    </div>
+                    <!-- <div class="device device-iphone-x">
+                        <img class="device-iphone-x-frame" src="./assets/svg/components/iphone-x.svg"
+                            alt="Image Description">
+                        <img class="device-iphone-x-screen" src="./assets/img/407x867/img3.jpg"
+                            alt="Image Description">
+                    </div> -->
+                </div>
+                <!-- End Device Mockup -->
+            </div>
+            <div class="tab-pane fade" id="pills-six-code-features" role="tabpanel"
+                aria-labelledby="pills-six-code-features-tab">
+                <!-- Device Mockup -->
+                <div class="device-wrapper">
+                    <div class="device">
+                        <img class="img-fluid" src="./assets/svg/components/macbook.svg" alt="Image Description">
+                        <img class="device-macbook-screen" src="./img/screenshots/10.png"
+                            alt="Image Description">
+                    </div>
+                    <!-- <div class="device device-iphone-x">
+                        <img class="device-iphone-x-frame" src="./assets/svg/components/iphone-x.svg"
+                            alt="Image Description">
+                        <img class="device-iphone-x-screen" src="./assets/img/407x867/img3.jpg"
+                            alt="Image Description">
+                    </div> -->
+                </div>
+                <!-- End Device Mockup -->
+            </div>
+        </div>
+        <!-- End Tab Content -->
+    </div>
+    <!-- End Features Section -->
 
-  </div>
-</section>
+    <!-- Stories Section -->
+    <div class="bg-dark">
+        <div class="container space-top-2">
+            <div class="row justify-content-md-between mb-6">
+                <div class="col-md-6 col-lg-5 mb-3 mb-md-0">
+                    <h2 class="text-white font-weight-normal">Subscribe to get the latest from FreePos</h2>
+                </div>
 
-<section class="client-logo ptb-100">
-  <section class="section-title">
-      <div class="container text-center">
-          <h2>Our Clients</h2>
-          <span class="bordered-icon"><i class="fa fa-circle-thin"></i></span>
-      </div>
-  </section>
-  <div class="container">
-      <div class="row">
-          <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-              <a href="#"><img src="img/logo-client-1.jpg" alt="Image"></a>
-          </div>
-          <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-              <a href="#"><img src="img/logo-client-2.jpg" alt="Image"></a>
-          </div>
-          <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-              <a href="#"><img src="img/logo-client-3.jpg" alt="Image"></a>
-          </div>
-          <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-              <a href="#"><img src="img/logo-client-4.jpg" alt="Image"></a>
-          </div>
-          <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-              <a href="#"><img src="img/logo-client-5.jpg" alt="Image"></a>
-          </div>
-          <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-              <a href="#"><img src="img/logo-client-6.jpg" alt="Image"></a>
-          </div>
-      </div>
-  </div>
+                <!-- Form -->
+                <div class="col-md-6">
+                    <form class="js-validate mb-2">
+                        <label class="sr-only" for="signupSrEmail">Email</label>
+                        <div class="input-group">
+                            <input type="email" class="form-control" name="email" id="signupSrEmail"
+                                placeholder="Your email address" aria-label="Your email address" required>
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-block btn-primary">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End Form -->
 
-</section>
+                    <p class="small text-white-70">You can unsubscribe at any time.</p>
+                </div>
+            </div>
+
+            <hr class="opacity-xs my-0">
+        </div>
+    </div>
+    <!-- End Stories Section -->
+</main>
+
+
 <script>
     function navigatetopageblank(link){
         window.open("/"+link,"_blank")
@@ -353,4 +456,10 @@
         window.open("https://"+link)
 
     }
+    function navigatetolink(link){
+        location.replace("https://"+link)
+
+    }
 </script>
+<!-- onclick="navigatetolinkblank('github.com/ravicosoftltd/businessbook-desktop/releases/latest/download/BusinessBook.Setup.zip')"
+onclick="navigatetolinkblank('github.com/ravicosoftltd/businessbook-desktop')" -->
