@@ -18,26 +18,27 @@ var router = express.Router();
     res.render('main/support', { title: 'Express' });
   });
   router.get('/faq', function(req, res, next) {
-    res.render('main/faq.ejs', { title: 'Express' });
+    res.render('main/faq', { title: 'Express' });
   });
   router.get('/download', function(req, res, next) {
-    res.render('main/download.ejs', { title: 'Express' });
+    res.render('main/download', { title: 'Express' });
   });
   router.get('/contactus', function(req, res, next) {
-    res.render('main/contactus.ejs', { title: 'Express' });
+    res.render('main/contactus', { title: 'Express' });
   });
   router.get('/signup', function(req, res, next) {
-    res.render('main/account/signup.ejs', { title: 'Express' });
+    res.render('main/account/signup', { title: 'Express' });
   });
   router.get('/login', function(req, res, next) {
-    res.render('main/account/login.ejs', { title: 'Express' });
+    res.render('main/account/login', { title: 'Express' });
   });
   router.get('/accountrecover', function(req, res, next) {
-    res.render('main/account/accountrecover.ejs', { title: 'Express' });
+    res.render('main/account/accountrecover', { title: 'Express' });
   });
   router.get('/termsandconditions', function(req, res, next) {
-    res.render('main/termsandconditions.ejs', { title: 'Express' });
+    res.render('main/termsandconditions', { title: 'Express' });
   });
+
 
 
 
