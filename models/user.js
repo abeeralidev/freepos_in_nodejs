@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require('bcryptjs');
+const jwt = require("jsonwebtoken")
 
 const RegisterSchema = new mongoose.Schema({
     
@@ -11,10 +12,6 @@ const RegisterSchema = new mongoose.Schema({
     password : {
         type:String,
         required:true
-    },
-    termsCheckbox : {
-        type:String,
-        required:false
     },
     role : {
         type:String,
@@ -35,17 +32,32 @@ const RegisterSchema = new mongoose.Schema({
 
 })
 
-console.log("sss")
+//genetairng tokens
 
+RegisterSchema.methods.generateAuthToken = async function(){
+    try{
+        // console.log(this._id)
+        const token = jwt.sign({_id:this._id.toString()},"mynamwishasnt")
+        console.log(token)
+        // this.token = this.tokens.concat({tokem:token})
+        // await this.save();
+        // return token;
+    }
+    catch(error){
+        res.send("error in jwt" +error)
+        console.log("error ins jwt"+error)
+    }
+}
+
+
+
+
+
+//converting password in hash
 RegisterSchema.pre("save", async function(next) {
     if(this.isModified("password")){
-
-        //   const passwordHash= await  bcrypt.hash(password, 10)
-        console.log(`this is before ${this.password}`);
         this.password = await bcrypt.hash(this.password,10)
-    
-        console.log(`this is before ${this.password}`);
-    }
+        }
     next()
 })
 

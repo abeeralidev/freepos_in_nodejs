@@ -1,0 +1,600 @@
+<% layout('./layout') -%>
+
+    <main id="content" role="main" class="bg-light">
+        <!-- Breadcrumb Section -->
+        <div class="bg-dark" style="background-image: url(./assets/svg/components/abstract-shapes-20.svg);">
+            <div class="container space-1 space-top-lg-2 space-bottom-lg-3">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div class="d-none d-lg-block">
+                            <h1 class="h2 text-white">Teams</h1>
+                        </div>
+
+                        <!-- Breadcrumb -->
+                        <ol class="breadcrumb breadcrumb-light breadcrumb-no-gutter mb-0">
+                            <li class="breadcrumb-item">Account</li>
+                            <li class="breadcrumb-item active" aria-current="page">Teams</li>
+                        </ol>
+                        <!-- End Breadcrumb -->
+                    </div>
+
+                    <div class="col-auto">
+                        <div class="d-none d-lg-block">
+                            <a class="btn btn-sm btn-soft-light" href="#">Log out</a>
+                        </div>
+
+                        <!-- Responsive Toggle Button -->
+                        <button type="button" class="navbar-toggler btn btn-icon btn-sm rounde-circle d-lg-none" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebarNav" data-toggle="collapse" data-target="#sidebarNav">
+              <span class="navbar-toggler-default">
+                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
+                </svg>
+              </span>
+              <span class="navbar-toggler-toggled">
+                <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="currentColor" d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+                </svg>
+              </span>
+            </button>
+                        <!-- End Responsive Toggle Button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Breadcrumb Section -->
+
+        <!-- Content Section -->
+        <div class="container space-1 space-top-lg-0 space-bottom-lg-2 mt-lg-n10">
+            <div class="row">
+                <div class="col-lg-3">
+                    <!-- Navbar -->
+                    <div class="navbar-expand-lg navbar-expand-lg-collapse-block navbar-light">
+                        <div id="sidebarNav" class="collapse navbar-collapse navbar-vertical">
+                            <!-- Card -->
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <!-- Avatar -->
+                                    <div class="d-none d-lg-block text-center mb-5">
+                                        <div class="avatar avatar-xxl avatar-circle mb-3">
+                                            <img class="avatar-img" src="./assets/img/160x160/img1.jpg" alt="Image Description">
+                                            <img class="avatar-status avatar-lg-status" src="./assets/svg/illustrations/top-vendor.svg" alt="Image Description" data-toggle="tooltip" data-placement="top" title="Verified user">
+                                        </div>
+
+                                        <h4 class="card-title">Natalie Curtis</h4>
+                                        <p class="card-text font-size-1">natalie@example.com</p>
+                                    </div>
+                                    <!-- End Avatar -->
+
+                                    <!-- Nav -->
+                                    <h6 class="text-cap small">Account</h6>
+
+                                    <!-- List -->
+                                    <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4">
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="account-overview.html">
+                        <i class="fas fa-id-card nav-icon"></i> Personal info
+                      </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="account-login-and-security.html">
+                        <i class="fas fa-shield-alt nav-icon"></i> Login &amp; security
+                      </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="account-notifications.html">
+                        <i class="fas fa-bell nav-icon"></i> Notifications
+                        <span class="badge badge-soft-dark badge-pill nav-link-badge">1</span>
+                      </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="account-preferences.html">
+                        <i class="fas fa-sliders-h nav-icon"></i> Preferences
+                      </a>
+                                        </li>
+                                    </ul>
+                                    <!-- End List -->
+
+                                    <h6 class="text-cap small">Shopping</h6>
+
+                                    <!-- List -->
+                                    <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2 mb-4">
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="account-orders.html">
+                        <i class="fas fa-shopping-basket nav-icon"></i> Your orders
+                      </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="account-wishlist.html">
+                        <i class="fas fa-heart nav-icon"></i> Wishlist
+                        <span class="badge badge-soft-dark badge-pill nav-link-badge">2</span>
+                      </a>
+                                        </li>
+                                    </ul>
+                                    <!-- End List -->
+
+                                    <h6 class="text-cap small">Billing</h6>
+
+                                    <!-- List -->
+                                    <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="account-billing.html">
+                        <i class="fas fa-credit-card nav-icon"></i> Plans &amp; payment
+                      </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="account-address.html">
+                        <i class="fas fa-map-marker-alt nav-icon"></i> Address
+                      </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="account-teams.html">
+                        <i class="fas fa-users nav-icon"></i> Teams
+                        <span class="badge badge-soft-dark badge-pill nav-link-badge">+2 new users</span>
+                      </a>
+                                        </li>
+                                    </ul>
+                                    <!-- End List -->
+
+                                    <div class="d-lg-none">
+                                        <div class="dropdown-divider"></div>
+
+                                        <!-- List -->
+                                        <ul class="nav nav-sub nav-sm nav-tabs nav-list-y-2">
+                                            <li class="nav-item">
+                                                <a class="nav-link text-primary" href="#">
+                          <i class="fas fa-sign-out-alt nav-icon"></i> Log out
+                        </a>
+                                            </li>
+                                        </ul>
+                                        <!-- End List -->
+                                    </div>
+                                    <!-- End Nav -->
+                                </div>
+                            </div>
+                            <!-- End Card -->
+                        </div>
+                    </div>
+                    <!-- End Navbar -->
+                </div>
+
+                <div class="col-lg-9">
+                    <!-- Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-header-title">Your team</h5>
+                        </div>
+
+                        <!-- Table -->
+                        <div class="table-responsive">
+                            <table class="table table-borderless table-thead-bordered table-nowrap table-align-middle">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Status</th>
+                                        <th>Access</th>
+                                        <th style="width: 5%;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="media align-items-center">
+                                                <img class="avatar avatar-sm avatar-circle mr-3" src="./assets/img/100x100/img1.jpg" alt="Image Description">
+
+                                                <div class="media-body">
+                                                    <a class="d-inline-block text-dark" href="#">
+                                                        <h6 class="text-hover-primary mb-0">Amanda Harvey <img class="avatar avatar-xss ml-1" src="./assets/svg/illustrations/top-vendor.svg" alt="Image Description" data-toggle="tooltip" data-placement="top" title="Verified user"></h6>
+                                                    </a>
+                                                    <small class="d-block">amanda@example.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelActive1" selected data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-success mr-2"></span> Active</span>'>Active</option>
+                        <option value="memberStatusLabelInactive1" data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-danger mr-2"></span> Inactive</span>'>Inactive</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelAdmin1" selected>Admin</option>
+                        <option value="memberStatusLabelCanEdit1">Can edit</option>
+                        <option value="memberStatusLabelCanView1">Can view</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <a class="text-body" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Locked">
+                        <i class="fas fa-lock"></i>
+                      </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="media align-items-center">
+                                                <img class="avatar avatar-sm avatar-circle mr-3" src="./assets/img/100x100/img2.jpg" alt="Image Description">
+
+                                                <div class="media-body">
+                                                    <a class="d-inline-block text-dark" href="#">
+                                                        <h6 class="text-hover-primary mb-0">Anne Richard</h6>
+                                                    </a>
+                                                    <small class="d-block">anne@example.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelActive2" data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-success mr-2"></span> Active</span>'>Active</option>
+                        <option value="memberStatusLabelInactive2" selected data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-danger mr-2"></span> Inactive</span>'>Inactive</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelAdmin2">Admin</option>
+                        <option value="memberStatusLabelCanEdit2" selected>Can edit</option>
+                        <option value="memberStatusLabelCanView2">Can view</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <a class="text-body" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Remove member">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="media align-items-center">
+                                                <span class="avatar avatar-sm avatar-dark avatar-circle mr-3">
+                          <span class="avatar-initials">FH</span>
+                                                </span>
+
+                                                <div class="media-body">
+                                                    <a class="d-inline-block text-dark" href="#">
+                                                        <h6 class="text-hover-primary mb-0">Finch Hoot</h6>
+                                                    </a>
+                                                    <small class="d-block">finch@example.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelActive4" selected data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-success mr-2"></span> Active</span>'>Active</option>
+                        <option value="memberStatusLabelInactive4" data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-danger mr-2"></span> Inactive</span>'>Inactive</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelAdmin4">Admin</option>
+                        <option value="memberStatusLabelCanEdit4">Can edit</option>
+                        <option value="memberStatusLabelCanView4" selected>Can view</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <a class="text-body" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Remove member">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="media align-items-center">
+                                                <img class="avatar avatar-sm avatar-circle mr-3" src="./assets/img/100x100/img3.jpg" alt="Image Description">
+
+                                                <div class="media-body">
+                                                    <a class="d-inline-block text-dark" href="#">
+                                                        <h6 class="text-hover-primary mb-0">David Harrison <span class="badge badge-soft-info badge-pill ml-1">New</span></h6>
+                                                    </a>
+                                                    <small class="d-block">david@example.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelActive3" selected data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-success mr-2"></span> Active</span>'>Active</option>
+                        <option value="memberStatusLabelInactive3" data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-danger mr-2"></span> Inactive</span>'>Inactive</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelAdmin3">Admin</option>
+                        <option value="memberStatusLabelCanEdit3" selected>Can edit</option>
+                        <option value="memberStatusLabelCanView3">Can view</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <a class="text-body" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Remove member">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="media align-items-center">
+                                                <span class="avatar avatar-sm avatar-danger avatar-circle mr-3">
+                          <span class="avatar-initials">SD</span>
+                                                </span>
+
+                                                <div class="media-body">
+                                                    <a class="d-inline-block text-dark" href="#">
+                                                        <h6 class="text-hover-primary mb-0">Sean Dean</h6>
+                                                    </a>
+                                                    <small class="d-block">bob@example.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelActive5" data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-success mr-2"></span> Active</span>'>Active</option>
+                        <option value="memberStatusLabelInactive5" selected data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-danger mr-2"></span> Inactive</span>'>Inactive</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelAdmin5">Admin</option>
+                        <option value="memberStatusLabelCanEdit5" selected>Can edit</option>
+                        <option value="memberStatusLabelCanView5">Can view</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <a class="text-body" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Remove member">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="media align-items-center">
+                                                <img class="avatar avatar-sm avatar-circle mr-3" src="./assets/img/100x100/img9.jpg" alt="Image Description">
+
+                                                <div class="media-body">
+                                                    <a class="d-inline-block text-dark" href="#">
+                                                        <h6 class="text-hover-primary mb-0">Sam Kart <img class="avatar avatar-xss ml-1" src="./assets/svg/illustrations/top-vendor.svg" alt="Image Description" data-toggle="tooltip" data-placement="top" title="Verified user"></h6>
+                                                    </a>
+                                                    <small class="d-block">sam@example.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelActive6" data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-success mr-2"></span> Active</span>'>Active</option>
+                        <option value="memberStatusLabelInactive6" selected data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-danger mr-2"></span> Inactive</span>'>Inactive</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelAdmin6">Admin</option>
+                        <option value="memberStatusLabelCanEdit6">Can edit</option>
+                        <option value="memberStatusLabelCanView6" selected>Can view</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <a class="text-body" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Remove member">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="media align-items-center">
+                                                <img class="avatar avatar-sm avatar-circle mr-3" src="./assets/img/100x100/img10.jpg" alt="Image Description">
+
+                                                <div class="media-body">
+                                                    <a class="d-inline-block text-dark" href="#">
+                                                        <h6 class="text-hover-primary mb-0">Ella Marley</h6>
+                                                    </a>
+                                                    <small class="d-block">ella@example.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelActive7" selected data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-success mr-2"></span> Active</span>'>Active</option>
+                        <option value="memberStatusLabelInactive7" data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-danger mr-2"></span> Inactive</span>'>Inactive</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelAdmin7">Admin</option>
+                        <option value="memberStatusLabelCanEdit7" selected>Can edit</option>
+                        <option value="memberStatusLabelCanView7">Can view</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <a class="text-body" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Remove member">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="media align-items-center">
+                                                <img class="avatar avatar-sm avatar-circle mr-3" src="./assets/img/100x100/img11.jpg" alt="Image Description">
+
+                                                <div class="media-body">
+                                                    <a class="d-inline-block text-dark" href="#">
+                                                        <h6 class="text-hover-primary mb-0">Rachel Doe <span class="badge badge-soft-info badge-pill ml-1">New</span></h6>
+                                                    </a>
+                                                    <small class="d-block">rachel@example.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelActive8" selected data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-success mr-2"></span> Active</span>'>Active</option>
+                        <option value="memberStatusLabelInactive8" data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-danger mr-2"></span> Inactive</span>'>Inactive</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelAdmin8">Admin</option>
+                        <option value="memberStatusLabelCanEdit8" selected>Can edit</option>
+                        <option value="memberStatusLabelCanView8">Can view</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <a class="text-body" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Remove member">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="media align-items-center">
+                                                <span class="avatar avatar-sm avatar-primary avatar-circle mr-3">
+                          <span class="avatar-initials">BH</span>
+                                                </span>
+
+                                                <div class="media-body">
+                                                    <a class="d-inline-block text-dark" href="#">
+                                                        <h6 class="text-hover-primary mb-0">Brian Halligan</h6>
+                                                    </a>
+                                                    <small class="d-block">brian@example.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelActive9" selected data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-success mr-2"></span> Active</span>'>Active</option>
+                        <option value="memberStatusLabelInactive9" data-option-template='<span class="d-flex align-items-center"><span class="legend-indicator bg-danger mr-2"></span> Inactive</span>'>Inactive</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <!-- Select -->
+                                            <select class="js-custom-select" data-hs-select2-options='{
+                              "minimumResultsForSearch": "Infinity",
+                              "customClass": "custom-select custom-select-sm",
+                              "dropdownAutoWidth": true
+                            }'>
+                        <option value="memberStatusLabelAdmin9">Admin</option>
+                        <option value="memberStatusLabelCanEdit9">Can edit</option>
+                        <option value="memberStatusLabelCanView9" selected>Can view</option>
+                      </select>
+                                            <!-- End Select -->
+                                        </td>
+                                        <td>
+                                            <a class="text-body" href="javascript:;" data-toggle="tooltip" data-placement="top" title="Remove member">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- End Table -->
+
+                        <!-- Footer -->
+                        <div class="card-footer d-flex justify-content-end">
+                            <a class="btn btn-white" href="javascript:;">Cancel</a>
+                            <span class="mx-2"></span>
+                            <a class="btn btn-primary" href="javascript:;">Save Changes</a>
+                        </div>
+                        <!-- End Footer -->
+                    </div>
+                    <!-- End Card -->
+                </div>
+            </div>
+            <!-- End Row -->
+        </div>
+        <!-- End Content Section -->
+    </main>

@@ -9,6 +9,7 @@ require("./db/conn");
 const Users = require("./models/user");
 const Contact = require("./models/contact");
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken")
 
 var indexRouter = require("./routes/main/index");
 var adminindexRouter = require("./routes/admin/index");
@@ -58,7 +59,6 @@ app.post("/signup", async (req, res) => {
       const registeruser = new Users({
         email: req.body.email,
         password: req.body.password,
-        termsCheckbox: req.body.termsCheckbox,
         createdDate: new Date(),
         lastlogindate: new Date(),
         role: "user",
@@ -68,14 +68,20 @@ app.post("/signup", async (req, res) => {
 
       // middleware concept
 
+      const token = await registeruser.generateAuthToken();
+      console.log(token)
+      console.log("fuck everything");
+      
+
       console.log("done");
       const registerd = await registeruser.save();
     }
 
     console.log("inproess");
     // res.status(201).send(req.body)
-    res.send(req.body);
+    // res.send(req.body);
 
+    res.render("main/account/logedin/account-overview");
     // console.log("inproess");
     // res.status(201).render(adminindexRouter)
     // res.render(indexRouter)
@@ -145,32 +151,70 @@ app.post("/login", async (req, res) => {
 
     const useremail = await Users.findOne({ email: email });
 
-    const isMatch = await bcrypt.compare(password,useremail.password)
+    if(email=="admin@admin.com"){
+      const isMatch = await bcrypt.compare(password,useremail.password)
 
-    // Users.findOne({password:password})
-    // res.send(useremail.password)
-    console.log(isMatch);
-    console.log(useremail);
-
-    if (isMatch==true) {
-      res.status(201).redirect("/admin");
-    } else {
-      res.send("Password is invalid");
+      if (isMatch==true) {
+        res.status(201).render("admin/index")
+  
+      } else {
+        res.send("Email or Password is invalid");
+      }
+    }
+    else{
+      
+      const isMatch = await bcrypt.compare(password,useremail.password)
+      
+      // Users.findOne({password:password})
+      // res.send(useremail.password)
+      console.log(isMatch);
+      console.log(useremail);
+      
+      if (isMatch==true) {
+        res.status(201).render("main/account/logedin/account-overview")
+        
+      } else {
+        res.send("Email or Password is invalid");
+      }
     }
   } catch (error) {
     res.status(400).send("Email or Password is invalid");
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(aaaaaaa(404));
 });
+
+
+
+
+
 function aaaaaaa(params) {
   router.get("", function (req, res, next) {
     res.render("main/index", { title: "Express" });
   });
 }
+
+
+
+
+
+
+
+
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -182,6 +226,13 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
+
+
+
+
+
+
+
 
 module.exports = app;
 
@@ -198,7 +249,19 @@ async function dbsetting() {
       lastlogindate: new Date(),
       password: "admin@123",
       role: "admin",
-      termsCheckbox: "Yes",
+    });
+  }
+  var sampleuser = await Users.findOne({
+    email: "user@user.com",
+    role: "user",
+  });
+  if (!sampleuser) {
+    await Users.create({
+      createdDate: new Date(),
+      email: "user@user.com",
+      lastlogindate: new Date(),
+      password: "user@123",
+      role: "user",
     });
   }
 }
@@ -219,6 +282,29 @@ async function dbsetting() {
 // }
 
 // securePassword("hasnat123")
+
+
+
+
+
+
+
+
+
+
+
+// const createToken = async() =>{
+//   const token = await jwt.sign({_id:"61255a328303d514ccf91b5c"},"hasnat")
+//   console.log(token)
+// }
+
+
+// createToken()
+
+
+
+
+
 
 app.listen(process.env.PORT || 8016);
 console.log("Server is running at http://localhost:8016");
