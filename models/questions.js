@@ -3,22 +3,14 @@ const QuestionSchema = new mongoose.Schema({
     email : {
         type:String,
         required:true,
-        unique:true
+        unique:false
     },
-    password : {
+    questionstring : {
         type:String,
         required:true
-    },
-    confirmPassword : {
-        type:String,
-        required:true
-    },
-    termsCheckbox : {
-        type:String,
-        required:false
     },
 })
 
-const Questions = new  mongoose.model("Questions",QuestionSchema);
+const questions = new  mongoose.model("Questions",QuestionSchema);
 
-module.exports = Questions
+module.exports = questions

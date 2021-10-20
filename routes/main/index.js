@@ -38,6 +38,10 @@ var router = express.Router();
   router.get('/termsandconditions', function(req, res, next) {
     res.render('main/termsandconditions', { title: 'Express' });
   });
+  router.get('/faq', function(req, res, next) {
+    res.render('main/faq', { title: 'Express' });
+  });
+  
 
 
 
